@@ -1,6 +1,5 @@
 from alpine:latest
-
-run apk update && apk add nodejs
+run apk add --no-cache nodejs && apk add --no-cache git
 run npm i -g http-server
 workdir /home
 add ./public /home
